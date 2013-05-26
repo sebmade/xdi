@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="XDI">
+  <title>XDI : XML Data Integrator</title>
+  <body>
+    <links>
+      <item name="Improve" href="http://www.improve.fr/"/>
+     </links>
+    <menu name="XDI">
+      <item name="Présentation" href="/index.html" />
+      <item name="Historique" href="/history.html"/>
+    </menu>
+    <menu name="Documentation">
+      <item name="Didacticiel" href="/tutorial.html" />
+    </menu>
+    <menu name="Téléchargement">
+      <item name="Distribution" href="/download.html" />
+      <item name="Notes d'installation" href="/installation.html"/>
+    </menu>
+    <links>
+      <item name="Maven"  href="http://maven.apache.org/"/>
+    </links>
+  </body>
+</project>

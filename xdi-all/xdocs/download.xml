@@ -1,0 +1,22 @@
+<document>
+  <properties>
+    <author email="user@company.com">John Doe</author>
+    <title>Page Title</title>
+  </properties>
+  <body>
+	<section name="Binaire et source">
+		<p>binaires : 
+		<ul>
+			<li><a href="distributions/xdi-1.0.0.zip">xdi-1.0.0.zip</a></li>
+			<li><a href="distributions/xdi-1.0.0.tar.gz">xdi-1.0.0.tar.gz</a></li>
+		</ul>
+		sources : 
+		<ul>
+			<li><a href="distributions/xdi-1.0.0-src.zip">xdi-1.0.0-src.zip</a></li>
+			<li><a href="distributions/xdi-1.0.0-src.tar.gz">xdi-1.0.0-src.tar.gz</a></li>
+		</ul>
+		N.B. : L'utilisation d'XDI dépend d'une <a href="LICENSE.txt">licence</a>.
+		</p>
+	</section>
+  </body>
+</document>

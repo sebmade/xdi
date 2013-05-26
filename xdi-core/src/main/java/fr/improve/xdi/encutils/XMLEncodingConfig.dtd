@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!ELEMENT config
+   (entity*)
+>
+<!ELEMENT entity
+   (entity*, includes?, excludes?, extents?)
+>
+<!ATTLIST entity
+	name CDATA #REQUIRED
+>
+<!ATTLIST entity
+	followRelationships CDATA #IMPLIED
+>
+<!ELEMENT excludes
+   (attributes?, toOnes?, toManys?)
+>
+<!ELEMENT extents
+   (attributes?, toOnes?, toManys?)
+>
+<!ELEMENT includes
+   (attributes?, toOnes?, toManys?)
+>
+<!ELEMENT attributes (key*)>
+<!ATTLIST attributes 
+	allKeys CDATA #IMPLIED
+>
+<!ELEMENT toManys (key*)>
+<!ATTLIST toManys 
+	allKeys CDATA #IMPLIED
+>
+<!ELEMENT toOnes (key*)>
+<!ATTLIST toOnes 
+	allKeys CDATA #IMPLIED
+>
+<!ELEMENT key (#PCDATA)>

@@ -1,0 +1,19 @@
+<document>
+  <properties>
+    <author email="s.letelie@improve.fr">Sébastien Letélié</author>
+    <title>XDI - XML Data Integrator</title>
+  </properties>
+  <body>
+  <section name="Historique">
+    <p>
+    	Face à de nombreuses demandes d'interfaçages entre applications, pour la plupart du temps éviter la double saisie,
+    	nous avons penser à généraliser le processus et de le soumettre à la communauté. 
+    </p>
+    <p>
+    	XDI a en parti été développé dans le cadre d'un projet de recherche portant sur l'informatique mobile, 
+		domaine où les échanges d'informations entre applications sont nombreux. Un <a href="memoire/memoire.html">mémoire</a> a été rédigé
+    	et reprend en détail le fonctionnement de XDI.
+    </p>
+  </section>
+  </body>
+</document>

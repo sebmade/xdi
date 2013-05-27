@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fr.improve</groupId>
+  <artifactId>xdi-site</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0</version>
+
+  <properties>
+    <github.global.server>github</github.global.server>
+    <package>fr.improve.xdi</package>
+    <logo>/images/logo.gif</logo>
+    <shortDescription>XML Data Integrator : Integration de données en XML</shortDescription>
+   </properties>
+
+  <inceptionYear>2004</inceptionYear>
+  <description>XML Data Integrator est un framework d'intégration de données en XML, permettant l?import et l?export de données au format XML, quel que soit la base de données utilisée et l?architecture associée.</description>
+  <url>http://sebmade.github.io/xdi</url>
+
+    <scm>
+      <url>scm:git:https://github.com/sebmade/xdi.git</url>
+    </scm>
+  
+  <mailingLists>
+    <mailingList>
+      <name>xdi-project@googlegroups.com</name>
+      <subscribe>xdi-project-subscribe@googlegroups.com</subscribe>
+      <unsubscribe>xdi-project-unsubscribe@googlegroups.com</unsubscribe>
+      <archive>http://groups-beta.google.com/group/xdi-project</archive>
+    </mailingList>
+  </mailingLists>
+  
+  <developers>
+    <developer>
+      <name>Sébastien Letélié</name>
+      <id>1</id>
+      <email>s.letelie@improve.fr</email>
+      <organization>Improve</organization>
+    </developer>
+    <developer>
+      <name>Stephan Mertz</name>
+      <id>2</id>
+      <email>s.mertz@improve.fr</email>
+      <organization>Improve</organization>
+    </developer>
+    <developer>
+      <name>Jean-Michel Ramseyer</name>
+      <id>3</id>
+      <email>jm.ramseyer@improve.fr</email>
+      <organization>Improve</organization>
+    </developer>
+  </developers>
+  
+  <build>
+  <plugins>
+    <plugin>
+      <groupId>com.github.github</groupId>
+      <artifactId>site-maven-plugin</artifactId>
+      <version>0.6</version>
+      <configuration>
+        <message>Creating site for ${project.version}</message>
+      </configuration>
+      <executions>
+        <execution>
+          <goals>
+            <goal>site</goal>
+          </goals>
+          <phase>site</phase>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+  </build>
+
+</project>

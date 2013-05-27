@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>xdi-site - XDI - XML Data Integrator</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+          <meta name="author" content="Sébastien Letélié" />
+          </head>
+  <body class="composite">
+    <div id="banner">
+                    <span id="bannerLeft">
+    
+            xdi-site
+    
+            </span>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+    
+            <div class="xleft">
+        Last Published: 2013-05-27
+                      </div>
+            <div class="xright">            <a href="http://sebmade.github.io/xdi" class="externalLink">xdi-site</a>
+            
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+    
+                                                          <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section"><h2><a name="Introduction"></a>Introduction</h2>
+<div class="section"><h3><a name="Quest_ce_que_XDI_"></a>Qu'est ce que XDI ?</h3>
+<p>XDI est un framework en JAVA pour l'échange et l'intégration de données, adapté à tous types d'applications. Le principe de fonctionnement consiste en trois éléments :</p>
+<ul><li>Formaliser une base existante sous forme de document XML pour permettre l'import et l'export de données via ce format, indépendamment de la base de donnée utilisée et en s'appuyant sur des outils de mapping relationnel / objet (EOF, Hibernate, OJB, ...). </li>
+<li>Convertir des formats XML existants ou des formats autres que XML pour s'adapter à l'existant</li>
+<li>Echanger les données via différents types de services</li>
+</ul>
+</div>
+<div class="section"><h3><a name="Objectifs"></a>Objectifs</h3>
+<p>Ouvrir son application vers l'extérieur sur la base de standards actuels</p>
+<p>Réduire la mise en place d'un échange entre application à la seule réflexion des correspondances entre les données</p>
+</div>
+</div>
+<div class="section"><h2><a name="Import__Export"></a>Import / Export</h2>
+<p>L'import et l'export de donnée sont des processus &quot;intelligents&quot; basés sur un modèle objet permettant leur contrôle et leur extension pour des besoins spécifiques :</p>
+<ul><li>l'importation de données est par défaut capable de :
+	<ul><li>détecter si la donnée à insérer existe déjà et de définir le comportement associé : mis à jour, écrasement, ignore ...</li>
+<li>insérer la donnée</li>
+<li>supprimer la donnée</li>
+</ul>
+</li>
+<li>l'exportation de donnée est par défaut capable de :
+	<ul><li>générer un format XML de base représentant les données brutes stockées en base</li>
+<li>générer un format XML particulier</li>
+</ul>
+</li>
+</ul>
+<p>XDI permet l'export et l'import de tous types de données, même binaires.</p>
+<p>XDI intègre une validation des données et une gestion d'erreur.</p>
+<p>Pour les spécificités liées à certaines applications, le principe d'extension permet, par exemple, de fusionner des données, d'effectuer des validations supplémentaires, de canaliser la gestion des erreurs pour s'adapter à un mode spécifique (envoi d'alertes, logs ...)</p>
+<p>Pour permettre l'importation de données en base, un format XML représentant la base de données est défini. Ce format contient un ensemble d'attributs rattachés à des balises permettant de définir les types de données et les actions (création, mise à jour, suppression, fusion ...).</p>
+<p>La validation est gérée en définissant un XMLSchema ou une DTD en corrélation avec le format XML précédemment défini.</p>
+<p>La gestion des erreurs est par défaut &quot;passive&quot;. Le principe consiste en un objet à l'écoute des erreurs remontées lors des traitements qui par défaut logue l'information mais n'arrête pas le processus. Ainsi les données correctes sont traitées. Cet objet peut être étendu pour s'adapter à des besoins spécifiques et permet alors de stopper le processus si besoin.</p>
+<p>Pour des raisons de performances, les données sont traitées sous forme d'entité. Le document XML consiste en une liste de &quot;fragment&quot; XML représentant une table de la base de données. Ainsi il est possible de traiter des documents XML de grande taille, la lecture du document se faisant séquentiellement, entité par entité.</p>
+<p><img src="images/schema_importexport.gif" /></p>
+</div>
+<div class="section"><h2><a name="Conversion"></a>Conversion</h2>
+<p>XDI intègre un modèle de conversion pour s'adapter à des formats XML existants ou pour exploiter des formats autre que XML à l'import comme à l'export.</p>
+<p>L'adaptation à des formats XML existant utilise la technologie XSLT, l'utilisateur d'XDI devra concevoir son convertisseur en créant une feuille de style XSL.</p>
+<p>L'exploitation de formats autre que XML est plus spécifique. Actuellement XDI propose de base deux convertisseurs :</p>
+<ul><li>fichier texte à séparateur de champs : CSV (Comma Separated Value)</li>
+<li>fichier texte à longueur de champs fixe</li>
+</ul>
+</div>
+<div class="section"><h2><a name="Services"></a>Services</h2>
+<p>XDI intègre un modèle de services d'échanges pour permettre l'envoi et la réception de données. Actuellement 3 types de services sont implémentés :</p>
+<ul><li>HTTP et HTTPS</li>
+<li>Web Services</li>
+<li>répertoire</li>
+</ul>
+</div>
+<div class="section"><h2><a name="Schéma_global_de_fonctionnement"></a>Schéma global de fonctionnement</h2>
+<p><img src="images/schema_complet.gif" /></p>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2004-2013
+    
+          
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

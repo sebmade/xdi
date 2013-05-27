@@ -15,11 +15,11 @@
 
   <inceptionYear>2004</inceptionYear>
   <description>XML Data Integrator est un framework d'intégration de données en XML, permettant l?import et l?export de données au format XML, quel que soit la base de données utilisée et l?architecture associée.</description>
-  <url>http://sebmade.github.io/xdi</url>
+  <url>https://sebmade.github.io/xdi</url>
 
-    <scm>
-      <url>scm:git:https://github.com/sebmade/xdi.git</url>
-    </scm>
+  <scm>
+    <url>https://github.com/sebmade/xdi.git</url>
+  </scm>
   
   <mailingLists>
     <mailingList>
@@ -56,8 +56,10 @@
     <plugin>
       <groupId>com.github.github</groupId>
       <artifactId>site-maven-plugin</artifactId>
-      <version>0.6</version>
+      <version>0.8</version>
       <configuration>
+        <repositoryName>xdi</repositoryName>
+        <repositoryOwner>sebmade</repositoryOwner>
         <message>Creating site for ${project.version}</message>
       </configuration>
       <executions>
